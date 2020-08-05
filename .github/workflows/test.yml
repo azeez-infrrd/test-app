@@ -1,15 +1,13 @@
 name: CI-test
-
 on:
   pull_request:
     branches: [ master ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: azeez-infrrd/PR-linter@v1.0.0-beta
+    - name: Verify PR standards
+      uses: azeez-infrrd/PR-linter@b93412c51b5a585cf15a6c08ca021a67a37d4f92
 
 
     
