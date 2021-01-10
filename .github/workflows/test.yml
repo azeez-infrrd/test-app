@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Verify PR standards
-      uses: azeez-infrrd/PR-linter@2955d99556c92abb16e5899c002b10ef1fb25405        
+      uses: azeez-infrrd/PR-linter@fbb53bee2ca75f39b716308d796c4d2691688de1        
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         projects: 'TEST'
