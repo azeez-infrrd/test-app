@@ -1,13 +1,18 @@
 name: CI-test
 on:
   pull_request:
+    types: [opened, synchronize, reopened, edited]
     branches: [ master ]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Verify PR standards
-      uses: azeez-infrrd/PR-linter@b93412c51b5a585cf15a6c08ca021a67a37d4f92
+      uses: azeez-infrrd/PR-linter@2955d99556c92abb16e5899c002b10ef1fb25405        
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        projects: 'TEST'
+        project_tracker: 'JIRA'
 
 
     
